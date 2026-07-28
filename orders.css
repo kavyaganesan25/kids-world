@@ -1,0 +1,231 @@
+/* ===========================
+   ORDERS PAGE
+=========================== */
+
+.orders-page{
+    padding:80px 8%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.order-card{
+    width:100%;
+    max-width:900px;
+    background:#fff;
+    border-radius:30px;
+    padding:50px 40px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+    animation:fadeUp .8s ease;
+}
+
+.order-card h1{
+    color:#ff6b6b;
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#666;
+    font-size:18px;
+    margin-bottom:50px;
+}
+
+/* Road */
+
+.road{
+    width:100%;
+    max-width:700px;
+    margin:40px auto;
+    position:relative;
+    height:120px;
+}
+
+.line{
+    position:absolute;
+    top:55px;
+    left:0;
+    width:100%;
+    height:12px;
+    background:#555;
+    border-radius:30px;
+}
+
+#truck{
+    position:absolute;
+    left:0;
+    top:12px;
+    font-size:60px;
+    transition:1s ease;
+    z-index:2;
+}
+
+.gift{
+    position:absolute;
+    right:-10px;
+    top:10px;
+    font-size:60px;
+    animation:bounce 1.5s infinite;
+}
+
+/* Stars */
+/* Stars */
+
+.stars{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    margin:35px 0;
+    flex-wrap:wrap;
+}
+
+.star{
+    font-size:55px;
+    width:70px;
+    height:70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+    user-select:none;
+}
+
+.star:hover{
+    transform:scale(1.25) rotate(15deg);
+}
+
+.star.active{
+    transform:scale(1.25);
+    filter:drop-shadow(0 0 10px gold);
+}
+
+/* Progress */
+
+.progress-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+    gap:15px;
+    margin-top:35px;
+}
+
+.step{
+    background:#f4f4f4;
+    padding:15px;
+    border-radius:15px;
+    font-weight:600;
+    transition:.4s;
+}
+
+.step.active{
+    background:#ff6b6b;
+    color:white;
+    transform:translateY(-5px);
+    box-shadow:0 8px 18px rgba(255,107,107,.35);
+}
+
+/* Status */
+
+#status{
+    margin-top:35px;
+    display:inline-block;
+    padding:15px 28px;
+    background:#eef4ff;
+    color:#4f46e5;
+    font-weight:600;
+    border-radius:40px;
+}
+
+/* Reward */
+
+#reward{
+    margin-top:30px;
+    display:none;
+    font-size:2rem;
+    color:#ff6b6b;
+    animation:bounce 1s infinite;
+}
+
+/* Animations */
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.orders-page{
+    padding:40px 5%;
+}
+
+.order-card{
+    padding:30px 20px;
+    border-radius:25px;
+}
+
+.order-card h1{
+    font-size:2rem;
+}
+
+.subtitle{
+    font-size:15px;
+}
+
+.road{
+    height:90px;
+}
+
+.line{
+    top:42px;
+}
+
+#truck,
+.gift{
+    font-size:42px;
+}
+
+.star{
+    font-size:38px;
+}
+
+.progress-box{
+    grid-template-columns:1fr;
+}
+
+.step{
+    font-size:14px;
+}
+
+#reward{
+    font-size:1.4rem;
+}
+
+}
